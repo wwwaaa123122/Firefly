@@ -65,12 +65,12 @@ export const siteConfig: SiteConfig = {
 		// 3. 本地图片（src目录，自动优化但会增加构建时间，推荐）: { type: "image", value: "assets/images/logo.webp", alt: "Logo" }
 		// 4. 网络图片: { type: "url", value: "https://example.com/logo.png", alt: "Logo" }
 		logo: {
-			type: "image",
-			value: "assets/images/firefly.png",
-			alt: "🍀",
+			type: "url",
+			value: "https://q2.qlogo.cn/headimg_dl?dst_uin=3385016019&spec=5",
+			alt: "Starlr",
 		},
 		// 导航栏标题
-		title: "Firefly",
+		title: "Starlr",
 		// 全宽导航栏，导航栏是否占满屏幕宽度
 		widthFull: false,
 		// 导航菜单对齐方式，left：左对齐，center：居中
