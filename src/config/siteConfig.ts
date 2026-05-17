@@ -13,7 +13,7 @@ export const siteConfig: SiteConfig = {
 	subtitle: "爱你所爱",
 
 	// 站点 URL
-	site_url: "https://starlr.cc",
+	site_url: "https://xc-lr.cn",
 
 	// 站点描述
 	description: "分享网络技术、服务器部署、内网穿透、静态网站搭建、CDN优化、容器化部署等技术教程与实践经验的个人技术博客，专注于云原生、无服务器架构和前后端开发，作者为starlr/星辰旅人",
