@@ -11,7 +11,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	showInNavbar: true,
 
 	// 使用方式："meting" 使用 Meting API，"local" 使用本地音乐列表
-	mode: "meting",
+	mode: "local",
 
 	// 默认音量 (0-1)
 	volume: 0.7,
@@ -43,17 +43,20 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	},
 
 	// 本地音乐配置（当 mode 为 'local' 时使用）
-	// 1. 支持传入歌词文件的路径
-	// lrc: "/assets/music/lrc/使一颗心免于哀伤-哼唱.lrc",
-	// 2. 或者直接填入歌词字符串内容
-	// lrc: "[00:00.00]歌词内容...",
 	local: {
 		playlist: [
 			{
 				name: "使一颗心免于哀伤",
-				artist: "知更鸟 / HOYO-MiX / Chevy",
-				url: "/assets/music/使一颗心免于哀伤-哼唱.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
+				artist: "知更鸟",
+				url: "https://starlr.cc.cd/Music/%E4%BD%BF%E4%B8%80%E9%A2%97%E5%BF%83%E5%85%8D%E4%BA%8E%E5%93%80%E4%BC%A4%20-%20%E7%9F%A5%E6%9B%B4%E9%B8%9F_HOYO-MiX_Chevy.flac?raw",
+				cover: "https://p2.music.126.net/aR4BlDNkA84tFbg8bBpriA==/109951169585655912.jpg?param=130y130",
+				lrc: "",
+			},
+			{
+				name: "若我不曾见过太阳",
+				artist: "知更鸟",
+				url: "https://starlr.cc.cd/Music/%E5%B8%8C%E6%9C%9B%E6%9C%89%E7%BE%BD%E6%AF%9B%E5%92%8C%E7%BF%85%E8%86%80%20-%20%E7%9F%A5%E6%9B%B4%E9%B8%9F_HOYO-MiX_Chevy.flac?raw",
+				cover: "https://p2.music.126.net/aR4BlDNkA84tFbg8bBpriA==/109951169585655912.jpg?param=130y130",
 				lrc: "",
 			},
 		],
