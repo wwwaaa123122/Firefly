@@ -1,38 +1,48 @@
-# 关于我 / About Me
+# 关于我
 
-你好！我是 **夏叶** ，一个在数字世界中默默无闻的一片叶子。
+初中生一位
 
-## 🛠️ 关于本站
+## 联系我？
 
-这个网站使用 **Astro** 框架构建，采用了 [Firefly](https://github.com/CuteLeaf/Firefly) 模板，Firefly 是基于 [Fuwari](https://github.com/saicaca/fuwari) 的二次开发。
+企微：
+![企微](../images/qiwei.svg)
+QQ：
+![QQ](../images/QQ.svg)
 
-**Firefly** 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。
+邮箱：i@mcxclr.top
 
+<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=wquCuqHvrrDsoaw" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"/></a>
 
-**🖥️在线预览： [Firefly - Demo site](https://firefly.cuteleaf.cn/)**
+[B站](https://space.bilibili.com/3493078983772353)
 
-**🏠我的博客： [https://blog.cuteleaf.cn](https://blog.cuteleaf.cn/)**
+[telegram](https://t.me/wwwaaa123122)
 
-**📝Firefly使用文档： [https://docs-firefly.cuteleaf.cn](https://docs-firefly.cuteleaf.cn/)**
+<h2>成年倒计时</h2>
+<div id="five-year-countdown" style="font-size:1.5em;font-weight:bold;color:#ff6600;"></div>
 
-**⭐Firefly开源地址：[https://github.com/CuteLeaf/Firefly](https://github.com/CuteLeaf/Firefly)** 
+<script>
+(function() {
+  const endDate = new Date("2030-07-20T00:00:00").getTime();
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = endDate - now;
 
-**⭐Fuwari开源地址：[https://github.com/saicaca/fuwari](https://github.com/saicaca/fuwari)**
+    if (distance <= 0) {
+      document.getElementById("five-year-countdown").innerText = "成年了！🎉🎉🎉";
+      clearInterval(timer);
+      return;
+    }
 
-::github{repo="CuteLeaf/Firefly"}
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-::github{repo="saicaca/fuwari"}
+    document.getElementById("five-year-countdown").innerText =
+      `${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒`;
+  }
 
-
-## 📫 联系方式
-
-如果你想和我交流技术问题，分享有趣的想法，或者只是想打个招呼，欢迎通过以下方式联系我：
-
-- 💻 **GitHub**: [CuteLeaf](https://github.com/CuteLeaf)
-- ✉️ **Email**: [xiaye@msn.com](mailto:xiaye@msn.com)
-- 🐧 **QQ交流群：[1087127207](https://qm.qq.com/q/ZGsFa8qX2G)**
-
----
-
-*感谢你的来访！希望在这里能找到对你有用的内容！*
-
+  updateCountdown();
+  const timer = setInterval(updateCountdown, 1000);
+})();
+</script>
