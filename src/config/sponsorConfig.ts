@@ -18,7 +18,7 @@ export const sponsorConfig: SponsorConfig = {
 	showComment: true,
 
 	// 是否在文章详情页底部显示赞助按钮
-	showButtonInPost: true,
+	showButtonInPost: false,
 
 	// 赞助方式列表
 	methods: [
