@@ -2,6 +2,7 @@
 title: MC免端口域名生成器使用与部署教程
 published: 2026-05-31
 description: '基于Cloudflare Workers的Minecraft免端口域名服务，让你的MC服务器玩家无需输入端口号'
+image: '../images/mc-srv.webp'
 tags: [minecraft,cloudflare,workers]
 category: 'tech'
 draft: false 

@@ -2,7 +2,7 @@
 title: Bot使用文档
 published: 2025-10-25
 description: '星辰旅人Bot使用文档'
-image: 'https://cdn.182030.xyz/images/public/95.webp?raw&proxied'
+image: '../images/how-use-bot-cover.webp'
 tags: [Bot]
 category: 'tech'
 draft: false 
