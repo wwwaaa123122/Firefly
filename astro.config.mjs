@@ -212,7 +212,7 @@ export default defineConfig({
 			rehypePlantuml,
 			rehypeFigure,
 			[rehypeExternalLinks, { siteUrl: siteConfig.site_url }],
-			[rehypeEmailProtection, { method: "base64" }], // 邮箱保护插件，支持 'base64' 或 'rot13'
+			[rehypeEmailProtection, { method: "base64" }], 
 			[
 				rehypeComponents,
 				{
