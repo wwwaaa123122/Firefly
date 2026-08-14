@@ -33,20 +33,11 @@ export const friendsConfig: FriendLink[] = [
 	},
 	{
 		title: "Acofork Blog",
-		imgurl: "https://avatars.githubusercontent.com/u/71391258?v=4&s=640",
+		imgurl: "https://q1.qlogo.cn/g?b=qq&nk=2726730791&s=640",
 		desc: "Acofork's personal blog",
-		siteurl: "https://acofork.com",
+		siteurl: "https://2x.nz",
 		tags: ["Blog"],
 		weight: 9,
-		enabled: true,
-	},
-	{
-		title: "伤心的导航网",
-		imgurl: "",
-		desc: "一个导航网站",
-		siteurl: "https://ll12.cyou",
-		tags: ["导航"],
-		weight: 8,
 		enabled: true,
 	},
 ];
