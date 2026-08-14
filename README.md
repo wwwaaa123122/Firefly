@@ -197,7 +197,7 @@ src/
 title: My First Blog Post
 published: 2023-09-09
 description: This is the first post of my new Astro blog.
-image: ../images/posts/<文章名>/cover.jpg  # 或使用 "api" 来启用随机封面图
+image: ../images/posts/cover.jpg  # 或使用 "api" 来启用随机封面图
 tags: [Foo, Bar]
 category: Front-end
 draft: false
@@ -216,7 +216,7 @@ comment: true    # 是否允许评论
 3. 选择本仓库（`wwwaaa123122/Firefly`）即可开始编辑
 
 - 编辑的**博客文章**位于 `src/content/posts/`，对应 `.pages.yml` 中的 `posts` 集合
-- **文章图片**统一存放在 `src/content/images/posts/<文章>/`（按文章子目录组织），上传后 frontmatter 中写入 `../images/posts/xxx` 相对路径
+- **文章图片**统一存放在 `src/content/images/posts/` 下，上传后 frontmatter 中写入 `../images/posts/xxx` 相对路径
 - **关于页 / 留言板 / 友情链接**等特殊页面同样可以在 CMS 中编辑
 - 所有改动由 GitHub App 直接提交到仓库，自动触发网站构建部署
 - 配置说明见仓库根目录的 [`.pages.yml`](.pages.yml)，完整文档见 [Pages CMS 文档](https://pagescms.org/docs/)

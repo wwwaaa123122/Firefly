@@ -2,7 +2,7 @@
 title: 通过Cloudflare Tunnel使用SSH
 published: 2026-02-04
 description: '通过Cloudflare Tunnel连接无公网IP的服务'
-image: '../images/posts/ssh-by-tunnel/SSH_Cloudflare.webp'
+image: '../images/posts/SSH_Cloudflare.webp'
 tags: [tech]
 category: 'cloudflare,tunnel,ssh'
 draft: false 
