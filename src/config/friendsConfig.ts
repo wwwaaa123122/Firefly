@@ -40,6 +40,15 @@ export const friendsConfig: FriendLink[] = [
 		weight: 9,
 		enabled: true,
 	},
+	{
+		title: "Donghai",
+		imgurl: "https://mgrowup.com/avatar.webp",
+		desc: "真诚记录，生活值得",
+		siteurl: "https://mgrowup.com/",
+		tags: ["Blog"],
+		weight: 8,
+		enabled: true,
+	},
 ];
 
 // 获取启用的友链并进行排序
