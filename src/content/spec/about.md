@@ -5,9 +5,9 @@
 ## 联系我？
 
 企微：
-![企微](../images/qiwei.svg)
+![企微](../images/spec/about/qiwei.svg)
 QQ：
-![QQ](../images/QQ.svg)
+![QQ](../images/spec/about/QQ.svg)
 
 邮箱：i@mcxclr.top
 

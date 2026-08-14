@@ -198,7 +198,7 @@ src/
 title: My First Blog Post
 published: 2023-09-09
 description: This is the first post of my new Astro blog.
-image: ./cover.jpg  # Or use "api" to enable random cover images
+image: ../images/posts/<post-slug>/cover.jpg  # Or use "api" to enable random cover images
 tags: [Foo, Bar]
 category: Front-end
 draft: false
@@ -217,7 +217,7 @@ This project is integrated with [Pages CMS](https://pagescms.org) — you can ed
 3. Select this repository (`wwwaaa123122/Firefly`) to start editing
 
 - Blog **posts** live in `src/content/posts/`, mapped to the `posts` collection in `.pages.yml`
-- Uploaded **cover images** are saved to `src/assets/images/` and written into the frontmatter as `../images/xxx` relative paths
+- **Post images** live in `src/content/images/posts/<post>/` (organized per post); uploads are written into the frontmatter as `../images/posts/xxx` relative paths
 - Special pages such as **About / Guestbook / Friends** are also editable in the CMS
 - All changes are committed to the repository by the GitHub App, triggering the site build automatically
 - Configuration lives in [`.pages.yml`](.pages.yml); full docs at [Pages CMS documentation](https://pagescms.org/docs/)

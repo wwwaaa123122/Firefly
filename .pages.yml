@@ -7,13 +7,18 @@
 # 所有改动会通过 GitHub App 直接提交到仓库，网站构建流程自动触发。
 
 # ============ 媒体（图片）存储 ============
-# 文章封面图存放在 src/assets/images/，
-# 写入 frontmatter 时使用相对路径 ../images/xxx（与现有文章保持一致）
+# 文章图片存放在 src/content/images/（按文章子目录组织），
+# 写入 frontmatter 时使用相对路径 ../images/posts/xxx
 media:
+  # 文章图片统一存放在 src/content/images/posts/ 下，按文章子目录组织：
+  #   posts/<文章文件名>/   封面图与正文图片
+  #   spec/about/          关于页等特殊页面图片
+  #   _unused/             暂无引用的历史图片
+  # 上传的新图片会写入 frontmatter 的相对路径 ../images/posts/xxx
   - name: images
     label: 文章图片
-    input: src/assets/images
-    output: ../images
+    input: src/content/images/posts
+    output: ../images/posts
     rename: safe
     categories: [image]
     commit:
