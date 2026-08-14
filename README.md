@@ -207,6 +207,20 @@ comment: true    # 是否允许评论
 ---
 ```
 
+## ✍️ 内容管理（PageCMS）
+
+本项目已接入 [Pages CMS](https://pagescms.org)，可以直接在浏览器中在线编辑文章、留言板等内容，无需在本地编写 Markdown。
+
+1. 打开 [app.pagescms.org](https://app.pagescms.org)，使用 GitHub 账号登录
+2. 在首次登录时安装 Pages CMS GitHub App 到你的账号或组织
+3. 选择本仓库（`wwwaaa123122/Firefly`）即可开始编辑
+
+- 编辑的**博客文章**位于 `src/content/posts/`，对应 `.pages.yml` 中的 `posts` 集合
+- **封面图**等图片上传后自动保存到 `src/assets/images/`，frontmatter 中写入 `../images/xxx` 相对路径
+- **关于页 / 留言板 / 友情链接**等特殊页面同样可以在 CMS 中编辑
+- 所有改动由 GitHub App 直接提交到仓库，自动触发网站构建部署
+- 配置说明见仓库根目录的 [`.pages.yml`](.pages.yml)，完整文档见 [Pages CMS 文档](https://pagescms.org/docs/)
+
 ## 🧩 Markdown 扩展语法
 
 除了 Astro 默认支持的 [GitHub Flavored Markdown](https://github.github.com/gfm/) 之外，还包含了一些额外的 Markdown 功能：

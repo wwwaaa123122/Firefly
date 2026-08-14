@@ -1,0 +1,161 @@
+# Pages CMS 配置文件
+# 文档: https://pagescms.org/docs/
+#
+# 本文件是 Pages CMS 的唯一配置来源，必须位于仓库根目录。
+# 使用方法：打开 https://app.pagescms.org ，用 GitHub 登录，
+# 安装 GitHub App 后选择本仓库即可在线编辑文章与图片。
+# 所有改动会通过 GitHub App 直接提交到仓库，网站构建流程自动触发。
+
+# ============ 媒体（图片）存储 ============
+# 文章封面图存放在 src/assets/images/，
+# 写入 frontmatter 时使用相对路径 ../images/xxx（与现有文章保持一致）
+media:
+  - name: images
+    label: 文章图片
+    input: src/assets/images
+    output: ../images
+    rename: safe
+    categories: [image]
+    commit:
+      templates:
+        create: "图片: 添加 {filename}"
+        update: "图片: 更新 {filename}"
+        delete: "图片: 删除 {filename}"
+        rename: "图片: 重命名 {oldFilename} -> {newFilename}"
+  - name: gallery
+    label: 相册图片
+    input: public/gallery
+    output: /gallery
+    categories: [image]
+
+# ============ 可编辑内容 ============
+content:
+  # 博客文章集合
+  - name: posts
+    label: 博客文章
+    type: collection
+    path: src/content/posts
+    format: yaml-frontmatter
+    filename:
+      # 新文章默认以标题（转 slug）命名，创建时可手动修改文件名
+      template: "{primary}.md"
+      field: create
+    view:
+      primary: title
+      default:
+        sort: published
+        order: desc
+    fields:
+      - name: title
+        label: 标题
+        type: string
+        required: true
+      - name: published
+        label: 发布日期
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: updated
+        label: 更新日期
+        type: date
+        options:
+          format: yyyy-MM-dd
+      - name: draft
+        label: 草稿
+        type: boolean
+        description: 草稿不会出现在正式构建中
+      - name: description
+        label: 描述
+        type: text
+      - name: image
+        label: 封面图
+        type: image
+        options:
+          media: images
+        description: 留空或填写 "api" 使用随机封面
+      - name: tags
+        label: 标签
+        type: string
+        list: true
+      - name: category
+        label: 分类
+        type: string
+        description: 例如 tech、daily
+      - name: lang
+        label: 文章语言
+        type: select
+        options:
+          values: [zh_CN, zh_TW, en, ja, ru]
+        description: 与站点语言不同时才需要设置
+      - name: pinned
+        label: 置顶
+        type: boolean
+      - name: comment
+        label: 启用评论
+        type: boolean
+      - name: password
+        label: 文章密码
+        type: string
+        description: 非空时文章将被加密访问
+      - name: passwordHint
+        label: 密码提示
+        type: string
+      - name: author
+        label: 作者
+        type: string
+      - name: sourceLink
+        label: 原文链接
+        type: string
+      - name: licenseName
+        label: 许可名称
+        type: string
+      - name: licenseUrl
+        label: 许可链接
+        type: string
+      - name: body
+        label: 正文
+        type: rich-text
+        required: true
+
+  # 关于页（无 frontmatter，使用原始编辑器）
+  - name: about
+    label: 关于页
+    type: file
+    path: src/content/spec/about.md
+
+  # 留言板
+  - name: guestbook
+    label: 留言板
+    type: file
+    path: src/content/spec/guestbook.md
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: 标题
+        type: string
+      - name: description
+        label: 描述
+        type: text
+      - name: body
+        label: 正文
+        type: rich-text
+
+  # 友情链接（MDX 文件，使用代码编辑器）
+  - name: friends
+    label: 友情链接
+    type: file
+    path: src/content/spec/friends.mdx
+    format: code
+
+# ============ 全局设置 ============
+settings:
+  content:
+    # 保存时保留 schema 之外的 frontmatter 字段，避免意外丢失数据
+    merge: true
+  commit:
+    templates:
+      create: "内容: 创建 {path}"
+      update: "内容: 更新 {path}"
+      delete: "内容: 删除 {path}"
+      rename: "内容: 重命名 {oldPath} -> {newPath}"

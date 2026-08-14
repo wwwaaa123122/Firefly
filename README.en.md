@@ -208,6 +208,20 @@ comment: true    # Enable comments
 ---
 ```
 
+## ✍️ Content Management (PageCMS)
+
+This project is integrated with [Pages CMS](https://pagescms.org) — you can edit blog posts and content directly in the browser, no local Markdown editing required.
+
+1. Open [app.pagescms.org](https://app.pagescms.org) and sign in with your GitHub account
+2. Install the Pages CMS GitHub App to your account or organization on first login
+3. Select this repository (`wwwaaa123122/Firefly`) to start editing
+
+- Blog **posts** live in `src/content/posts/`, mapped to the `posts` collection in `.pages.yml`
+- Uploaded **cover images** are saved to `src/assets/images/` and written into the frontmatter as `../images/xxx` relative paths
+- Special pages such as **About / Guestbook / Friends** are also editable in the CMS
+- All changes are committed to the repository by the GitHub App, triggering the site build automatically
+- Configuration lives in [`.pages.yml`](.pages.yml); full docs at [Pages CMS documentation](https://pagescms.org/docs/)
+
 ## 📖 Markdown Extensions
 
 In addition to the default [GitHub Flavored Markdown](https://github.github.com/gfm/) support in Astro, there are some additional Markdown features:
