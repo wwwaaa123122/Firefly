@@ -94,10 +94,6 @@ content:
       - name: pinned
         label: 置顶
         type: boolean
-      - name: comment
-        label: 启用评论
-        type: boolean
-        default: true
       - name: password
         label: 文章密码
         type: string
